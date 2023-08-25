@@ -1,0 +1,70 @@
+const React = require('react');
+const { Link, useParams } = require('react-router-dom');
+const { useState, useEffect } = require('react');
+const client = require('../client');
+
+const VerDetalleVentaPage = () => {
+
+    let { id } = useParams();
+    const [detalleventa, setDetalleVenta] = useState({});
+    const [infoventa, setInfoVenta] = useState([]);
+
+    useEffect(() => {
+        client({
+            method: 'GET',
+            path: '/api/detalleventas/' + id
+        }).done(response => setDetalleVenta(response.entity))
+        client({
+            method: 'GET',
+            path: '/api/detalleventas/' + id + '/formacion'
+        }).done(response => setInfoVenta(response.entity))
+    }, [])
+
+
+    return (
+        <>
+            <h1>Ver Detalle Ventas</h1>
+            <hr />
+
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>{banda.nombre}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+
+            <h2>Informacion Venta</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Venta</th>
+                        <th>Producto</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {integrantes.map(infoventa=>{
+                        return(
+                            <tr key={infoventa.ID}>
+                                <td>{infoventa.VENTA}</td>
+                                <td>{infoventa.PRODUCTO}</td>
+                            </tr>
+                        )
+                    })}
+
+                </tbody>
+
+            </table>
+
+            <hr />
+            <Link to={`/ver-detalleventa/${id}/nuevo-infoventa`}>Nueva Informacion Venta</Link> |
+            <Link to="/">Volver</Link>
+        </>
+    )
+
+}
+
+module.exports = VerDetalleVentaPage;

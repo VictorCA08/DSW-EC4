@@ -1,23 +1,23 @@
 @server = https://fictional-couscous-vgqvx74v6cv76-8080.app.github.dev
 ###
-GET {{server}}/api/instrumentos/2
+GET {{server}}/api/productos/2
 ###
-POST {{server}}/api/instrumentos
+POST {{server}}/api/productos
 Content-Type: application/json
 
-{"nombre": "Quena", "categoria": "Viento", "descripcion": "Como una flauta"}
+{"nombre": "Creatina MyProtein", "precio": "70", "descripcion": "."}
 ###
-GET {{server}}/api/musicos
+GET {{server}}/api/ventas
 ###
-POST {{server}}/api/musicos
+POST {{server}}/api/ventas
 Content-Type: application/json
 
-{"nombre": "Joaquín"}
+{"nombre": "1 Venta"}
 ###
-GET {{server}}/api/bandas
+GET {{server}}/api/detalleventa
 ###
-GET {{server}}/api/bandas/1
+GET {{server}}/api/detalleventa/1
 ###
-GET {{server}}/api/bandas/1/formacion
+GET {{server}}/api/detalleventa/1/infoventa
 ###
-GET {{server}}/api/integrantes
+GET {{server}}/api/infoventa

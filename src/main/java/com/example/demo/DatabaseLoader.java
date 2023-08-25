@@ -37,17 +37,17 @@ public class DatabaseLoader implements CommandLineRunner {
 		this.repositoryI.save(iProteina);
 		this.repositoryI.save(new Producto("Proteina Iso Whey Bum","180","."));
 
-		this.repositoryM.save(new Venta("Daniel F"));
-		Venta mFreddy = new Venta("Freddy");
-		this.repositoryM.save(mFreddy);
-		Venta mBrian = new Venta("Brian");
-		this.repositoryM.save(mBrian);
+		this.repositoryM.save(new Venta("30"));
+		Venta Venta1 = new Venta("22");
+		this.repositoryM.save(Venta1);
+		Venta Venta2 = new Venta("45");
+		this.repositoryM.save(Venta2);
 
-		DetalleVenta bQueen = new DetalleVenta("Queen");
-		this.repositoryB.save(bQueen);
+		DetalleVenta detalleVenta = new DetalleVenta("DetalleVenta1");
+		this.repositoryB.save(detalleVenta);
 
-		this.repositoryN.save(new InfoVenta(bQueen, mFreddy, iCreatina));
-		this.repositoryN.save(new InfoVenta(bQueen, mBrian, iProteina));
+		this.repositoryN.save(new InfoVenta(detalleVenta, Venta1, iCreatina));
+		this.repositoryN.save(new InfoVenta(detalleVenta, Venta2, iProteina));
 
 
 	}

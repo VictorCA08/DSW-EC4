@@ -3,12 +3,12 @@ const ReactDOM = require('react-dom');
 const {createBrowserRouter, RouterProvider} = require('react-router-dom');
 
 const HomePage = require('./pages/home');
-const NuevoVentaage = require('./pages/nueva-venta');
+const NuevoVentaPage = require('./pages/nueva-venta');
 const VerIProductoPage = require('./pages/ver-producto');
 const NuevoProductoPage = require('./pages/nuevo-producto');
 const VerVentaPage = require('./pages/ver-venta');
 const EditarProductoPage = require('./pages/editar-producto');
-const VerDetalleVentaPage = require('./pages/ver-detalleventajs');
+const VerDetalleVentaPage = require('./pages/ver-detalleventa');
 const NuevoInfoVentaPage = require('./pages/nueva-infoventa');
 
 

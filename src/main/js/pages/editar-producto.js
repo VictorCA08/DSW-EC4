@@ -37,11 +37,11 @@ const EditarProductoPage = ()=>{
                 <label>Descripcion</label>
                 <input type="text" id="descripcion" name="descripcion" value={producto.descripcion} onChange={(e)=>setProducto({...producto, descripcion: e.target.value})}  /> <br/>
                 
-                <input type="submit" value="Editar Instrumento" />
+                <input type="submit" value="Editar Producto" />
             </form>
 
         </>
     )
 }
 
-module.exports = EditarInstrumentoPage
+module.exports = EditarProductoPage

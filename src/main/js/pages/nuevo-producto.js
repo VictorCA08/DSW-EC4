@@ -28,7 +28,7 @@ const NuevoProductoPage = () => {
         <form onSubmit={handleSubmit}>
             <label>Nombre</label> <br />
             <input type="text" id='nombre' name='nombre' onChange={e=>setNombre(e.target.value)} /> <br />
-            <label>Categoría</label> <br />
+            <label>Precio</label> <br />
             <input type="text" id='precio' name='precio' onChange={e=>setPrecio(e.target.value)} /> <br />
             <label>Descripción</label> <br />
             <input type="text" id='descripcion' name='descripcion' onChange={e=>setDescripcion(e.target.value)} /> <br />

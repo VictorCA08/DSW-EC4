@@ -6,7 +6,7 @@ const client = require('../client');
 const VerVentaPage = () => {
 
     let { id } = useParams();
-    const [musico, setVenta] = useState({});
+    const [venta, setVenta] = useState({});
 
     useEffect(() => {
         client({

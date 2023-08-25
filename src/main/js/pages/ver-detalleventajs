@@ -16,7 +16,7 @@ const VerDetalleVentaPage = () => {
         }).done(response => setDetalleVenta(response.entity))
         client({
             method: 'GET',
-            path: '/api/detalleventas/' + id + '/formacion'
+            path: '/api/detalleventas/' + id + '/infoventa'
         }).done(response => setInfoVenta(response.entity))
     }, [])
 
@@ -30,7 +30,7 @@ const VerDetalleVentaPage = () => {
                 <tbody>
                     <tr>
                         <th>Nombre</th>
-                        <td>{banda.nombre}</td>
+                        <td>{detalleventa.nombre}</td>
                     </tr>
                 </tbody>
             </table>
@@ -46,7 +46,7 @@ const VerDetalleVentaPage = () => {
                 </thead>
                 <tbody>
 
-                    {integrantes.map(infoventa=>{
+                    {infoventas.map(infoventa=>{
                         return(
                             <tr key={infoventa.ID}>
                                 <td>{infoventa.VENTA}</td>
